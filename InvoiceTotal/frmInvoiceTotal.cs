@@ -17,6 +17,10 @@ namespace InvoiceTotal
             InitializeComponent();
         }
 
+        int numberOfInvoices = 0;
+        decimal totalOfInvoices = 0m;
+        decimal invoiceAverage = 0m;
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -24,33 +28,48 @@ namespace InvoiceTotal
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            decimal subtotal = Convert.ToDecimal(txtSubTotal.Text);
-            decimal discountPercent = 0m;
-            decimal discountAmount = 0m;
-            decimal invoiceTotal = 0m;
+            decimal subtotal = Convert.ToDecimal(txtEnterSubTotal.Text);
+            decimal discountPercent = .25m;
+            decimal discountAmount = Math.Round(subtotal * discountPercent);
+            decimal invoiceTotal = subtotal - discountAmount;
 
-            if (subtotal>=500)
-            {
-                discountPercent = .2m;
-            }
-            else if(subtotal>=250 && subtotal < 500)
-            {
-                discountPercent = .15m;
-            }
-            else if(subtotal>=100 && subtotal < 250)
-            {
-                discountPercent = .1m;
-            }
-
-
-            discountAmount = subtotal * discountPercent;
-            invoiceTotal = subtotal - discountAmount;
-
-            txtDiscountPercentage.Text = discountPercent.ToString("p1");
+            txtSubTotal.Text = subtotal.ToString("c");
+            txtDiscountPercentage.Text = discountPercent.ToString("c");
             txtDiscountAmount.Text = discountAmount.ToString("c");
-            txtTotal.Text = invoiceTotal.ToString("c");
 
-            txtSubTotal.Focus();
+            numberOfInvoices++;
+            totalOfInvoices += invoiceTotal;
+            invoiceAverage = totalOfInvoices / numberOfInvoices;
+
+            txtNumberOfInvoices.Text = numberOfInvoices.ToString();
+            txtTotalOfInvoices.Text = totalOfInvoices.ToString("c");
+            txtInvoiceAverage.Text = invoiceAverage.ToString("c");
+
+            txtEnterSubTotal.Text = "";
+            txtEnterSubTotal.Focus();            
+        }
+
+        private void frmInvoiceTotal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            numberOfInvoices = 0;
+            totalOfInvoices = 0m;
+            invoiceAverage = 0m;
+
+            txtNumberOfInvoices.Text = "";
+            txtTotalOfInvoices.Text = "";
+            txtInvoiceAverage.Text = "";
+
+            txtEnterSubTotal.Focus();
         }
     }
 }
