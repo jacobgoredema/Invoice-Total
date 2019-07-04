@@ -23,17 +23,25 @@ namespace InvoiceTotal
             decimal subtotal = Convert.ToDecimal(txtSubtotal.Text);
             decimal discountPercentage = .0m;
 
-            if (true)
+            if (customerType=="R")
             {
-
+                if (subtotal < 100)
+                    discountPercentage = .0m;
+                else if (subtotal >= 100 && subtotal < 250)
+                    discountPercentage = 0.1m;
+                else if (subtotal > 250)
+                    discountPercentage = .25m;
             }
-            else if (true)
+            else if (customerType=="C")
             {
-
+                if (subtotal < 250)
+                    discountPercentage = .2m;
+                else
+                    discountPercentage = .3m;
             }
             else
             {
-
+                discountPercentage = .4m;
             }
 
             decimal discountAmount = subtotal * discountPercentage;

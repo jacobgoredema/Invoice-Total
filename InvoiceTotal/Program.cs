@@ -16,7 +16,8 @@ namespace InvoiceTotal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInvoiceTotal());
+            //Application.Run(new frmInvoiceTotal());
+            Application.Run(new CustomerType());
         }
     }
 }

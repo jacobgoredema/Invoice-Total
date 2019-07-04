@@ -45,7 +45,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 146);
+            this.label1.Location = new System.Drawing.Point(21, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 172);
+            this.label2.Location = new System.Drawing.Point(21, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 13);
             this.label2.TabIndex = 1;
@@ -63,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 198);
+            this.label3.Location = new System.Drawing.Point(21, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 2;
@@ -72,7 +72,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 120);
+            this.label4.Location = new System.Drawing.Point(20, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 3;
@@ -80,42 +80,45 @@
             // 
             // txtCustomerType
             // 
-            this.txtCustomerType.Location = new System.Drawing.Point(138, 117);
+            this.txtCustomerType.Location = new System.Drawing.Point(138, 33);
             this.txtCustomerType.Name = "txtCustomerType";
             this.txtCustomerType.Size = new System.Drawing.Size(175, 20);
             this.txtCustomerType.TabIndex = 4;
             // 
             // txtSubtotal
             // 
-            this.txtSubtotal.Location = new System.Drawing.Point(138, 143);
+            this.txtSubtotal.Location = new System.Drawing.Point(138, 59);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(175, 20);
             this.txtSubtotal.TabIndex = 5;
             // 
             // txtDiscountPercentage
             // 
-            this.txtDiscountPercentage.Location = new System.Drawing.Point(138, 169);
+            this.txtDiscountPercentage.Enabled = false;
+            this.txtDiscountPercentage.Location = new System.Drawing.Point(138, 85);
             this.txtDiscountPercentage.Name = "txtDiscountPercentage";
             this.txtDiscountPercentage.Size = new System.Drawing.Size(175, 20);
             this.txtDiscountPercentage.TabIndex = 6;
             // 
             // txtDiscountAmount
             // 
-            this.txtDiscountAmount.Location = new System.Drawing.Point(138, 195);
+            this.txtDiscountAmount.Enabled = false;
+            this.txtDiscountAmount.Location = new System.Drawing.Point(138, 111);
             this.txtDiscountAmount.Name = "txtDiscountAmount";
             this.txtDiscountAmount.Size = new System.Drawing.Size(175, 20);
             this.txtDiscountAmount.TabIndex = 7;
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(138, 221);
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(138, 137);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(175, 20);
             this.txtTotal.TabIndex = 8;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(24, 274);
+            this.btnCalculate.Location = new System.Drawing.Point(24, 190);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(75, 23);
             this.btnCalculate.TabIndex = 9;
@@ -125,7 +128,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(133, 274);
+            this.btnExit.Location = new System.Drawing.Point(133, 190);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 10;
@@ -137,7 +140,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 224);
+            this.label5.Location = new System.Drawing.Point(21, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 11;
@@ -161,6 +164,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CustomerType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerType";
             this.ResumeLayout(false);
             this.PerformLayout();
